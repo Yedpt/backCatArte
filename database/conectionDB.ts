@@ -1,5 +1,4 @@
 import { Sequelize } from 'sequelize';
-import .env from "";
 
 const connectionDb = new Sequelize('tiendita', 'root', '12345.', {
   host: 'localhost',
