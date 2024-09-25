@@ -1,43 +1,64 @@
-import conectionDb from "../database/conectionDB";
-import { DataTypes, Model, Optional } from "sequelize";
+// models/Book.ts
+import { DataTypes, Model } from 'sequelize';
+import conectionDB from '../database/conectionDB.js'; // Importa tu conexión a la base de datos
 
-// Definimos una interfaz para los atributos del modelo
-interface BookAttributes {
-  bookTitle: string;
-  authorName: string;
-  bookDescription: string;
+// Definición de los atributos de Book
+interface CatAttributes {
+  name: string;
+  description: string;
+  category: string;
+  image: String;
+  date : Date;
+  likes : number;
 }
 
-// Definimos una interfaz para los atributos opcionales del modelo
-interface BookCreationAttributes extends Optional<BookAttributes, 'bookDescription'> {}
+// Extender la clase Model con los atributos de Book
+class catMeme extends Model<CatAttributes> implements CatAttributes {
+  public name!: string;
+  public description!: string;
+  public category!: string;
+  public image! : string;
+  public date! : Date;
+  public likes! : number;
 
-// Definimos la clase del modelo
-class Book extends Model<BookAttributes, BookCreationAttributes> implements BookAttributes {
-  public bookTitle!: string;
-  public authorName!: string;
-  public bookDescription!: string;
+  // Timestamps
+  public readonly createdAt!: Date;
+  public readonly updatedAt!: Date;
 }
 
-const bookModel = conectionDb.define<Book>(
-  'Book',
+// Definición del modelo con Sequelize
+catMeme.init(
   {
-    // Model attributes are defined here
-    bookTitle: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    authorName: {
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    category: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    bookDescription: {
-      type: DataTypes.STRING,
+      image: {
+        type : DataTypes.STRING,
+        allowNull : false,
+    },
+     date: {
+      type: DataTypes.DATE,
+      allowNull : false
+     },
+     likes: {
+      type : DataTypes.NUMBER,
       allowNull: false,
-    }
+     }
+    
   },
   {
-    timestamps: false
-  },
+    sequelize: conectionDB, // Tu conexión a la base de datos
+    tableName: 'catarte',
+  }
 );
 
-export default bookModel;
+export default catMeme;
