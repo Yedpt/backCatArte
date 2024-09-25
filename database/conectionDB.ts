@@ -1,6 +1,9 @@
 import { Sequelize } from 'sequelize';
+import dotenv from 'dotenv';
 
-const connectionDb = new Sequelize('tiendita', 'root', '12345.', {
+dotenv.config()
+
+const connectionDb = new Sequelize('catarte', 'root', process.env.DB_PASSWORD , {
   host: 'localhost',
   dialect: 'mysql',
   define: {
