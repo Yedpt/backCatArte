@@ -1,27 +1,47 @@
-// typescript
+import connectionDb from "../database/conectionDB";
+import { DataTypes, Model, Optional } from "sequelize";
 
-import db_connection from "../database/conectionDB.ts";
-import { DataTypes } from "sequelize";
+interface BookAttributes {
+  id: number;
+  bookTitle: string;
+  authorName: string;
+  bookDescription: string;
+}
 
-const catModel = db_connection.define(
-    'back_catarte',
-    {
-      // Model attributes are defined here
-      bookTitle: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      authorName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      bookDescription: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      }
+interface BookCreationAttributes extends Optional<BookAttributes, 'id'> {}
+
+class Book extends Model<BookAttributes, BookCreationAttributes> implements BookAttributes {
+  public id!: number;
+  public bookTitle!: string;
+  public authorName!: string;
+  public bookDescription!: string;
+}
+
+Book.init(
+  {
+    id: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      autoIncrement: true,
+      primaryKey: true,
     },
-    {
-     TimeStamp: false
+    bookTitle: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-  );
-export default catModel;
+    authorName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    bookDescription: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+  },
+  {
+    sequelize: connectionDb,
+    tableName: 'Books',
+    timestamps: false,
+  }
+);
+
+export default Book;
