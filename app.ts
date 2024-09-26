@@ -27,6 +27,20 @@ export const mostrarMemes = async (req: Request, res: Response): Promise<void>  
   }
 }
 
+//POST method
+export const updateMeme= async (req:Request, res:Response):Promise<void> =>{
 
+  const {body}=req;
+  try{
+    const meme = new Meme(body);
+    await meme.save();
+    res.json(meme);
+  } catch (error){
+    console.log(error);
+    res.status(500).json({
+      msg: 'Carga fallida'
+    })
+  }
+}
 
 
