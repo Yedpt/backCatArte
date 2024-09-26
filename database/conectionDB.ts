@@ -2,6 +2,7 @@ import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { resolve, dirname } from 'path';
+import {DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT} from '../config.js';
 
 // Simular __dirname en ES Modules
 const __filename = fileURLToPath(import.meta.url);
