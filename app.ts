@@ -1,13 +1,32 @@
-import connectionDb from "./database/conectionDB";
-import Book from "./models/catModel";
+import Meme from './models/catModel.js';  // Import model from table Meme
+import conectionDB from './database/conectionDB.js'; // Import database connection
+import { Response, Request } from 'express';
+import cors from 'cors';
+import express from 'express';
+import router from './routers/catRouter.js';
 
-(async () => {
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use('/meme', router)
+
+// GET method
+export const mostrarMemes = async (req: Request, res: Response): Promise<void>  => {
   try {
-    await connectionDb.authenticate();
-    console.log('Connection has been established successfully.');
-    await Book.sync({ force: true });
-    console.log('The table for the Book model was just re-created.');
+    await conectionDB.authenticate();  // Autheticas the database
+    console.log('Conexión a la base de datos exitosa');
+
+    // Fetch all memes from the database
+    const memes = await Meme.findAll();
+    
+    // Send the memes as a json response
+   res.json(memes);
   } catch (error) {
-    console.error('Unable to connect to the database:', error);
+    console.error('Error al conectar o consultar la base de datos 😒:', error);
+    res.status(500).json({ error: 'Error cargando memes de la base de datos'})
   }
-})();
+}
+
+
+
+
