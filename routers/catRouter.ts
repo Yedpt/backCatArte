@@ -1,9 +1,11 @@
 import { Router } from 'express';
-import { deleteMeme, getAllMemes } from  '../controllers/catController.js';
+import { deleteMeme, getAllMemes, createMeme } from  '../controllers/catController.js';
 
 const router = Router();
 
-router.get('/memes', getAllMemes);
+router.get('/', getAllMemes);
+
+router.post('/', createMeme);
 
 router.delete('/:id', deleteMeme);
 

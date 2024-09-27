@@ -10,6 +10,27 @@ export const getAllMemes = async (req: Request, res: Response) => {
   }
 };
 
+export const createMeme = async (req: Request, res: Response) => {
+  try {
+    const { name, description, category, image, date, likes } = req.body;
+    const meme = await catMeme.create({
+      name,
+      description,
+      category,
+      image,
+      date,
+      likes,
+    });
+    res.json(meme);
+  } catch (error) {
+    res.json({ message: "A ocurrido un error", error });
+  }
+};
+
+
+
+
+
 //funcion para eliminar el meme
 
 export const deleteMeme = async (req: Request, res: Response) => {
