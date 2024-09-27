@@ -13,6 +13,8 @@ export const getAllMemes = async (req: Request, res: Response) => {
   }
 };
 
+
+//CREATE - POST
 export const createMeme = async (req: Request, res: Response) => {
   try {
     const { name, description, category, image, date, likes } = req.body;
@@ -31,4 +33,5 @@ export const createMeme = async (req: Request, res: Response) => {
 };
 
 
+//DELETE - DELETE
 
