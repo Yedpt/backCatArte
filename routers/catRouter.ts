@@ -3,8 +3,8 @@ import { getAllMemes, createMeme } from  '../controllers/catController.js';
 
 const router = Router();
 
-router.get('/memes', getAllMemes);
+router.get('/', getAllMemes);
 
-//router.post('/', createMeme);
+router.post('/', createMeme);
 
 export default router;
