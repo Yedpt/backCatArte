@@ -14,6 +14,7 @@ app.use(express.json());
 
 app.use('/meme', router)
 app.use('/creatememe', router)
+app.use('/deletememe',router)
 
   try {
     await conectionDB.authenticate();  // Autheticas the database
