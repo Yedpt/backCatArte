@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/meme', router)
-
+app.use('/creatememe', router)
 
   try {
     await conectionDB.authenticate();  // Autheticas the database
