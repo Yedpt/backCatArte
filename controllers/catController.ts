@@ -38,8 +38,11 @@ export const deleteMeme = async (req: Request, res: Response) => {
     const memeId = req.params.id;
 
     const meme = await catMeme.findByPk(memeId)
-
+    
     await meme?.destroy();
+
+    res.json(meme);
+
 
   } catch (error) {
     console.log('El meme no se pudo eliminar', error);
