@@ -34,9 +34,6 @@ export const createMeme = async (req: Request, res: Response) => {
 
 
 //DELETE - DELETE
-
-
-
 //funcion para eliminar el meme
 
 export const deleteMeme = async (req: Request, res: Response) => {
