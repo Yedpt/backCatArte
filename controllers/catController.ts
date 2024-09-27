@@ -9,10 +9,9 @@ export const getAllMemes = async (req: Request, res: Response) => {
     const meme = await catMeme.findAll();
     res.json(meme);
   } catch (error) {
-    res.json({ message: "A ocurrido un error", error });
+    res.json({ message: "Ha ocurrido un error", error });
   }
 };
-
 
 //CREATE - POST
 export const createMeme = async (req: Request, res: Response) => {
@@ -28,28 +27,41 @@ export const createMeme = async (req: Request, res: Response) => {
     });
     res.json(meme);
   } catch (error) {
-    res.json({ message: "A ocurrido un error", error });
+    res.json({ message: "Ha ocurrido un error", error });
   }
 };
 
-
 //DELETE - DELETE
-//funcion para eliminar el meme
 
 export const deleteMeme = async (req: Request, res: Response) => {
   
   try {
     const memeId = req.params.id;
-
     const meme = await catMeme.findByPk(memeId)
-    
     await meme?.destroy();
-
     res.json(meme);
-
-
   } catch (error) {
     console.log('El meme no se pudo eliminar', error);
-    
   }
 };
+
+//UPDATE - PUT
+
+export const putMeme = async (req: Request, res: Response) => {
+  try {
+    const memeId = req.params.id;
+    const { name, description, category, image, date, likes } = req.body;
+    const meme = await catMeme.findByPk(memeId);
+    await meme?.update({
+      name,
+      description,
+      category,
+      image,
+      date,
+      likes,
+    });
+    res.json(meme);
+  } catch (error) {
+    console.log('El meme no se pudo actualizar', error);
+  }
+}
