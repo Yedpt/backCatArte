@@ -5,6 +5,6 @@ const router = Router();
 
 router.get('/memes', getAllMemes);
 
-router.post('/memes', createMeme);
+//router.post('/', createMeme);
 
 export default router;
