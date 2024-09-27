@@ -27,25 +27,15 @@ export const createMeme = async (req: Request, res: Response) => {
   }
 };
 
-
-
-
-
 //funcion para eliminar el meme
 
 export const deleteMeme = async (req: Request, res: Response) => {
   try {
     const memeId = req.params.id;
-
     const meme = await catMeme.findByPk(memeId)
-    
     await meme?.destroy();
-
     res.json(meme);
-
-
   } catch (error) {
     console.log('El meme no se pudo eliminar', error);
-    
   }
 };
