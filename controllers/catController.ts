@@ -1,6 +1,9 @@
 import { Request, Response } from 'express';
 import catMeme from '../models/catModel.js'
 
+//CRUD
+//READ - GET
+
 export const getAllMemes = async (req: Request, res: Response) => {
   try {
     const meme = await catMeme.findAll();
@@ -10,6 +13,7 @@ export const getAllMemes = async (req: Request, res: Response) => {
   }
 };
 
+//CREATE - POST
 export const createMeme = async (req: Request, res: Response) => {
   try {
     const { name, description, category, image, date, likes } = req.body;
@@ -27,7 +31,7 @@ export const createMeme = async (req: Request, res: Response) => {
   }
 };
 
-//funcion para eliminar el meme
+//DELETE - DELETE
 
 export const deleteMeme = async (req: Request, res: Response) => {
   try {
