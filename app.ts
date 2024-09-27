@@ -14,7 +14,6 @@ app.use(express.json());
 
 app.use('/meme', router)
 
-// GET method
 
   try {
     await conectionDB.authenticate();  // Autheticas the database
