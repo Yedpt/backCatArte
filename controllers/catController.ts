@@ -37,6 +37,7 @@ export const createMeme = async (req: Request, res: Response) => {
 //funcion para eliminar el meme
 
 export const deleteMeme = async (req: Request, res: Response) => {
+  
   try {
     const memeId = req.params.id;
 
