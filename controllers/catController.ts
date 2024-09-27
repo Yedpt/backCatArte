@@ -8,12 +8,17 @@ export const getAllMemes = async (req: Request, res: Response) => {
   } catch (error) {
     res.json({ message: "A ocurrido un error", error });
   }
-};import catModel from '../models/catModel.js'
+};
 
-export const getAllMemes = async (req: Request, res: Response) => {
+export const createMeme = async (req: Request, res: Response) => {
+
+  const {body} = req;
+
   try {
-    const meme = await catModel.findAll();
-    res.json(meme);
+    const meme = new Meme(body)
+    await catMeme.save();
+    res.json(meme)
+
   } catch (error) {
     res.json({ message: "A ocurrido un error", error });
   }
