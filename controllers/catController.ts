@@ -34,6 +34,7 @@ export const createMeme = async (req: Request, res: Response) => {
 //DELETE - DELETE
 
 export const deleteMeme = async (req: Request, res: Response) => {
+  
   try {
     const memeId = req.params.id;
     const meme = await catMeme.findByPk(memeId)
