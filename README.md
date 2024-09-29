@@ -1,8 +1,8 @@
 # Título del proyecto
-CatArt.
+BACKEND - 🐱 MUSEO VIRTUAL DE MEMES "MeCat".
 
 ## Descripción
-Este proyecto ha sido desarrollada para la Red Nacional de Museos con el objetivo de centralizar y gestionar la información de todas sus obras de arte acerca de GATOS en una base de datos relacional. La API expone una serie de endpoints que permiten realizar operaciones CRUD (Create, Read, Update, Delete) sobre las obras, facilitando así la integración con las aplicaciones front-end de la red, desarrolladas en React.
+Este proyecto ha sido desarrollada para "MeCat" el museo virtual dedicado a los memes de gatos más divertidos y virales, con el objetivo de centralizar y gestionar la información de toda su colección de memes felinos en una base de datos relacional. La API expone una serie de endpoints que permiten realizar operaciones CRUD (Create, Read, Update, Delete) sobre las obras, facilitando así la integración con las aplicaciones front-end de la red, desarrolladas en React.
 
 ## Empezando 🚀
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
@@ -43,8 +43,7 @@ Puedes abrir `index.html` en tu navegador para ver la aplicación en funcionamie
 
 ## Imágenes de la Web 🌅
 
-La pantalla principal tiene el siguiente aspecto:
-...
+A continuación se presentea imagenes del poryecto en funcionamiento:...
 
 
 
@@ -60,7 +59,7 @@ La pantalla principal tiene el siguiente aspecto:
 
 [![Jest](https://img.shields.io/badge/Jest-blue?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/): Framework de testing y herramienta para realizar pruebas unitarias y de integración.
 
-[![Postman](http://googleusercontent.com/image_generation_content/4)](https://www.postman.com/): Herramienta para documentar y probar los endpoints de la API.
+[![Postman](https://img.shields.io/badge/Postman-F65E1D?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/): Herramienta para documentar y probar los endpoints de la API.
 
 ## 🔮 Mirando al futuro
 
@@ -75,7 +74,7 @@ Omar Lengua - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-th
 
 Enmanuel Feliciano - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
 
-Wilder Aguilar - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com) https://github.com/Wilder-Aguilar
+Wilder Aguilar - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Wilder-Aguilar) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilderaguilar/)
 
 # Licencia 📄
 Este proyecto está bajo la Licencia ((Tu Licencia)) 
