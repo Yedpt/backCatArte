@@ -46,7 +46,7 @@ A continuación se presentea imagenes del poryecto en funcionamiento:...
 
 
 
-## 💻 Tecnologías empleadas 🛠️
+## 💻 Tecnologías empleadas
 
 [![Node.js](https://img.shields.io/badge/Node.js-green?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/) [![Express.js](https://img.shields.io/badge/Express.js-4DB33A?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/): Entorno de ejecución y framework web para el desarrollo del backend.
 
@@ -59,6 +59,21 @@ A continuación se presentea imagenes del poryecto en funcionamiento:...
 [![Jest](https://img.shields.io/badge/Jest-blue?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/): Framework de testing y herramienta para realizar pruebas unitarias y de integración.
 
 [![Postman](https://img.shields.io/badge/Postman-F65E1D?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/): Herramienta para documentar y probar los endpoints de la API.
+
+##  🛠️ Arquitectura
+
+La aplicación sigue una arquitectura MVC (Modelo-Vista-Controlador):
+
+Modelo: Define la estructura de los datos y las interacciones con la base de datos (Sequelize).
+
+Vista: Los endpoints de la API que exponen los datos y las funcionalidades (Express).
+
+Controlador: La lógica de negocio que conecta el modelo y la vista.
+
+# Estructura de Carpetas
+
+
+
 
 ## 🔮 Mirando al futuro
 
