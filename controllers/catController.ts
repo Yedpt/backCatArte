@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import catMeme from '../models/catModel.js'
 
-//CRUD
+//PETICIONES DEL BACK:
+
 //READ - GET
 
 export const getAllMemes = async (req: Request, res: Response) => {
