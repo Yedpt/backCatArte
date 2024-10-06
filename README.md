@@ -9,6 +9,8 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 ## Requisitos Previos 📋
 
 - **Node.js** instalado en tu máquina.
+- **MySQL Workbench** 
+- **Postman**
 
 ## Instalación 🔧
 
@@ -26,27 +28,33 @@ cd backCatArte
 ```bash
 npm install
 ```
+**3. Abrir el documento MeCat.sql**
 
-**3. Iniciar el servidor (json-server):**
+**4. Ejecutar la tabla de MeCat.sql (boton de ejecutar o **Ctrl+Enter**)**
+
+**5. Ejecutamos:**
 
 ```bash
-npm run api
+npm run dev
 ```
 
-Esto iniciará un servidor en tu localhost que servirá como nuestra API fake.
-
-**4. Abrir el archivo `index.html`:** ⚙️
-
-Puedes abrir `index.html` en tu navegador para ver la aplicación en funcionamiento.
-
+Esto iniciará un servidor en tu localhost que servirá como nuestra API fake (http://localhost:3000/).
 
 ## Imágenes de la Web 🌅
 
-A continuación se presentea imagenes del poryecto en funcionamiento:...
+A continuación se presentea imagenes del proyecto en funcionamiento:...
 
 
+## Documentacion POSTMAN [![Postman](https://img.shields.io/badge/Postman-F65E1D?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/)
 
-## 💻 Tecnologías empleadas
+En el siguiente link se tiene acceso a la documentación de POSTMAN del proyecto, os invitamos a descargar la coleccion de llamadas, probarlas y/o modificarlas:
+
+`<link>` : <https://documenter.getpostman.com/view/37812250/2sAXqzXymS>
+
+
+## Tecnologías empleadas 💻
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-blue?style=for-the-badge)](https://www.typescriptlang.org/)
 
 [![Node.js](https://img.shields.io/badge/Node.js-green?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/) [![Express.js](https://img.shields.io/badge/Express.js-4DB33A?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/): Entorno de ejecución y framework web para el desarrollo del backend.
 
@@ -60,7 +68,7 @@ A continuación se presentea imagenes del poryecto en funcionamiento:...
 
 [![Postman](https://img.shields.io/badge/Postman-F65E1D?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/): Herramienta para documentar y probar los endpoints de la API.
 
-##  🛠️ Arquitectura
+##  Arquitectura 🛠️
 
 La aplicación sigue una arquitectura MVC (Modelo-Vista-Controlador):
 
@@ -75,18 +83,26 @@ Controlador: La lógica de negocio que conecta el modelo y la vista.
 
 
 
-## 🔮 Mirando al futuro
+## Mirando al futuro 🔮
 
-Todo proyecto requiere de mejoras, se tiene identificada la ... si estás interesado en contribuir a esta función, te invito a clonar el repositorio y crear una rama para tus cambios. ¡Tu ayuda es muy valorada!
+Todo proyecto requiere de mejoras, se tienen identificadan las siguientes:
+
+-
+
+-
+
+-
+
+Si estás interesado en contribuir a este proyecto, te invitamos a clonar el repositorio y crear una rama para tus cambios. ¡Tu ayuda es muy valorada!
 
 # Autores ✒️
-Ana Maria Garcia - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+Ana Maria Garcia - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnaMaria-Sole) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ana-maria-graphicdesigner/)
 
-Yeder Pimentel - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+Yeder Pimentel - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Yedpt) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yeder-pimentel/)
 
-Omar Lengua - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+Omar Lengua - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Omarlsant) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omarlengua/)
 
-Enmanuel Feliciano - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+Enmanuel Feliciano - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EnmanuelFL) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilderaguilar/)
 
 Wilder Aguilar - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Wilder-Aguilar) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilderaguilar/)
 
