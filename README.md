@@ -1,7 +1,7 @@
 # **BACKEND - 🐱 MUSEO VIRTUAL DE MEMES "MeCat"**
 
 ## Descripción
-Este proyecto haa sido desarrollada para "MeCat" el museo virtual dedicado a los memes de gatos más divertidos y virales, con el objetivo de centralizar y gestionar la información de toda su colección de memes felinos en una base de datos relacional. La API expone una serie de endpoints que permiten realizar operaciones CRUD (Create, Read, Update, Delete) sobre las obras, facilitando así la integración con las aplicaciones front-end de la red, desarrolladas en React.
+Este proyecto ha sido desarrollada para "MeCat" el museo virtual dedicado a los memes de gatos más divertidos y virales, con el objetivo de centralizar y gestionar la información de toda su colección de memes felinos en una base de datos relacional. La API expone una serie de endpoints que permiten realizar operaciones CRUD (Create, Read, Update, Delete) sobre las obras, facilitando así la integración con las aplicaciones front-end de la red, desarrolladas en React.
 
 ## Empezando 🚀
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
