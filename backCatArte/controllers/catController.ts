@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import catMeme from '../models/catModel.js'
+import catMeme from '../models/catModel'
 
 //CRUD
 //READ - GET

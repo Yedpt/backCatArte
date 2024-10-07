@@ -1,9 +1,9 @@
-import conectionDB from './database/conectionDB.js'; // Import database connection
-import catMeme from './models/catModel.js';  // Import model from table Meme
+import conectionDB from './database/conectionDB'; // Import database connection
+import catMeme from './models/catModel';  // Import model from table Meme
 import express from 'express';
 import cors from 'cors';
-import { router } from './routers/catRouter.js';
-import {PORT} from './config.js';
+import { router } from './routers/catRouter';
+import {PORT} from './config';
 
 
 
@@ -20,11 +20,11 @@ app.use('/deletememe', router);
 app.use('/updatememe', router);
 
   try {
-    await conectionDB.authenticate();  // Autheticas the database
+   conectionDB.authenticate();  // Autheticas the database
     console.log('Conexión a la base de datos exitosa');
 
     // Fetch all memes from the database
-   await catMeme.sync({ force: false });
+   catMeme.sync({ force: false });
    console.log('Tabla de memes creada');
 
   } catch (error) {
