@@ -14,16 +14,13 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.use('/', router);
-app.use('/creatememe', router);
-app.use('/deletememe', router);
-app.use('/updatememe', router);
+app.use('/api/memes', router);
 
   try {
     await conectionDB.authenticate();  // Autheticas the database
     console.log('Conexión a la base de datos exitosa');
 
-    // Fetch all memes from the database
+    // Fetch all memes
    await catMeme.sync({ force: false });
    console.log('Tabla de memes creada');
 

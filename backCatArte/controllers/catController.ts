@@ -13,6 +13,23 @@ export const getAllMemes = async (req: Request, res: Response) => {
   }
 };
 
+
+//obtener meme POR ID
+export const getMemeById = async (req: Request, res: Response) => {
+  try {
+    const { id } = req.params;  // Obtener el id de los parámetros de la ruta
+    const meme = await catMeme.findByPk(id);  // Buscar el meme por su id usando findByPk
+
+    if (meme) {
+      res.json(meme);  // Si el meme existe, devolverlo
+    } else {
+      res.status(404).json({ message: "Meme no encontrado" });  // Si no existe, devolver error 404
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Ha ocurrido un error", error });  // Manejo de errores generales
+  }
+};
+
 //CREATE - POST
 export const createMeme = async (req: Request, res: Response) => {
   try {
