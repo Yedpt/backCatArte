@@ -10,7 +10,7 @@ import {PORT} from './config';
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // el localhost donde esta corriendo el front
+  origin: 'http://localhost:5173', // el localhost donde esta corriendo el frontend
 }));
 app.use(express.json());
 
