@@ -1,13 +1,13 @@
-import conectionDB from './database/conectionDB.js'; // Import database connection
-import catMeme from './models/catModel.js';  // Import model from table Meme
+import conectionDB from './database/conectionDB'; // Import database connection
+import catMeme from './models/catModel';  // Import model from table Meme
 import express from 'express';
 import cors from 'cors';
-import { router } from './routers/catRouter.js';
-import {PORT} from './config.js';
+import { router } from './routers/catRouter';
+import {PORT} from './config';
 
 
 
-const app = express();
+export const app = express();
 
 app.use(cors({
   origin: 'http://localhost:5173', // O el dominio donde esté corriendo tu front-end
@@ -20,11 +20,11 @@ app.use('/deletememe', router);
 app.use('/updatememe', router);
 
   try {
-    await conectionDB.authenticate();  // Autheticas the database
+     conectionDB.authenticate();  // Autheticas the database
     console.log('Conexión a la base de datos exitosa');
 
     // Fetch all memes from the database
-   await catMeme.sync({ force: false });
+   catMeme.sync({ force: false });
    console.log('Tabla de memes creada');
 
   } catch (error) {
@@ -32,6 +32,7 @@ app.use('/updatememe', router);
   }
 
 
-app.listen((PORT || 3000), () => {
+export const server = app.listen((PORT || 3000), () => {
   console.log(`Servidor corriendo en el puerto http://localhost:${PORT}/`);;
 });
+
