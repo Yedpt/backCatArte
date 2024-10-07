@@ -6,8 +6,8 @@ describe ('POST /users', () => {
     test('should create a new user', async () =>{
 
         const user = {
-            id:
-            name: 'juan pablo'
+            id: 22,
+            name: 'hola',        
             description: 'nose que poner',
             category: 'Cat',
             image: ' ',
