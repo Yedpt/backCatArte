@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { deleteMeme, getAllMemes, createMeme, putMeme } from  '../controllers/catController.js';
+import { deleteMeme, getAllMemes, createMeme, putMeme } from  '../controllers/catController';
 
 export const router = Router();
 
