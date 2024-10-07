@@ -10,21 +10,18 @@ import {PORT} from './config';
 export const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // O el dominio donde esté corriendo tu front-end
+  origin: 'http://localhost:5173', // el localhost donde esta corriendo el front
 }));
 app.use(express.json());
 
-app.use('/', router);
-app.use('/creatememe', router);
-app.use('/deletememe', router);
-app.use('/updatememe', router);
+app.use('/api/memes', router);
 
   try {
      conectionDB.authenticate();  // Autheticas the database
     console.log('Conexión a la base de datos exitosa');
 
-    // Fetch all memes from the database
-   catMeme.sync({ force: false });
+    // Fetch all memes
+    catMeme.sync({ force: false });
    console.log('Tabla de memes creada');
 
   } catch (error) {

@@ -6,12 +6,15 @@ import catMeme from '../models/catModel'
 
 export const getAllMemes = async (req: Request, res: Response) => {
   try {
-    const meme = await catMeme.findAll();
+    const meme = await catMeme.findAll(); // aqui cambia el metodo mongo
     res.json(meme);
   } catch (error) {
     res.json({ message: "Ha ocurrido un error", error });
   }
 };
+
+
+//obtener meme POR ID
 
 //CREATE - POST
 export const createMeme = async (req: Request, res: Response) => {
