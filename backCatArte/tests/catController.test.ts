@@ -1,11 +1,22 @@
 import  request  from "supertest";
 import { app, server }  from "../app";
 
-describe ('backCatArte', () => {
+describe ('POST /users', () => {
 
-    test('should return a response with 200 and type json', async () =>{
+    test('should create a new user', async () =>{
 
-        const response = await request(app).post('/creatememe'); 
+        const user = {
+            id:
+            name: 'juan pablo'
+            description: 'nose que poner',
+            category: 'Cat',
+            image: ' ',
+            date: 'holaaa',
+            likes: 56
+
+        }
+
+        const response = await request(app).post('/api/memes'); 
 
         expect(response.statusCode).toBe(200);
         expect(response.headers['content-type']).toContain('application/json')  
