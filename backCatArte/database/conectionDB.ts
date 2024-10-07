@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import { DB_NAME, DB_USER , DB_PASSWORD , DB_HOST, DB_PORT } from '../config.js';
 
 
-const connectionDb = new Sequelize( DB_NAME || '' , DB_USER || '' , DB_PASSWORD || '' , {
+const connectionDb = new Sequelize( DB_NAME , DB_USER, DB_PASSWORD , {
   host: DB_HOST ,
   dialect: 'mysql',
   port: Number(DB_PORT) || 3306,
