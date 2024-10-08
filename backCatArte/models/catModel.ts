@@ -1,6 +1,6 @@
 // models/Book.ts
 import { DataTypes} from 'sequelize';
-import conectionDB from '../database/conectionDB.js'; // Importa tu conexión a la base de datos
+import conectionDB from '../database/conectionDB'; // Importa tu conexión a la base de datos
 
 // Definición de los atributos de Book
 const catMeme = conectionDB.define('catMeme', {

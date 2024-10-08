@@ -22,3 +22,4 @@ export const validateUpdateMeme = [
 export const validateDeleteMeme = [
   param('id').isInt().withMessage('El ID debe ser un número entero'),
 ];
+
