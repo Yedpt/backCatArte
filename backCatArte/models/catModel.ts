@@ -23,7 +23,8 @@ const catMeme = conectionDB.define('catMeme', { // aqui cambia el mongo
   },
   date: {
     type: DataTypes.DATE,
-    allowNull: false,
+    defaultValue: DataTypes.NOW,
+    allowNull: true,
   },
   likes : {
     type: DataTypes.INTEGER,
