@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { app, server } from '../app';
 
-describe('PUT /users', () => {
+describe('DELETE /users', () => {
 
     afterAll((done) => {
     server.close(done);  
@@ -23,7 +23,7 @@ describe('PUT /users', () => {
 
     const response = await request(app)
 
-      .put('/api/memes/19')
+      .delete('/api/memes/19')
       .send(user)  
       .set('Content-Type', 'application/json');  
 
