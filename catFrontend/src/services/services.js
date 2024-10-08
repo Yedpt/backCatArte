@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BaseUrl = "http://localhost:3000/memes"; // Cambia por la URL de tu API si es necesario
+const BaseUrl = "http://localhost:3000/api/memes"; // Cambia por la URL de tu API si es necesario
 
 // GET Obtener todos los memes
 export const getMemes = async () => {
@@ -14,7 +14,7 @@ export const getMemes = async () => {
   }
 };
 
-// Obtener un meme por IDdsa
+// Obtener un meme por ID
 export const getMemeById = async (id) => {
   try {
     const response = await axios.get(`${BaseUrl}/${id}`);
