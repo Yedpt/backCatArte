@@ -5,12 +5,10 @@ import cors from 'cors';
 import { router } from './routers/catRouter';
 import {PORT} from './config';
 
-
-
-const app = express();
+export const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173', // el localhost donde esta corriendo el frontend
+  origin: 'http://localhost:5173', // el localhost donde esta corriendo el front
 }));
 app.use(express.json());
 
@@ -29,6 +27,7 @@ app.use('/api/memes', router);
   }
 
 
-app.listen((PORT || 3000), () => {
+export const server = app.listen((PORT || 3000), () => {
   console.log(`Servidor corriendo en el puerto http://localhost:${PORT}/`);;
 });
+
