@@ -1,10 +1,12 @@
 import { Router } from 'express';
-import { deleteMeme, getAllMemes, createMeme, putMeme } from  '../controllers/catController';
+import { deleteMeme, getAllMemes, createMeme, putMeme } from '../controllers/catController';
+import { validateCreateMeme, validateUpdateMeme, validateDeleteMeme } from '../validations/catValidation';
+import { validationHandler } from '../handle/handleValidator';
 
 export const router = Router();
 
-// Las rutas relativas, no especificas 'api/memes' aquí prueba
 router.get('/', getAllMemes);
-router.post('/', createMeme);
-router.delete('/:id', deleteMeme);
-router.put('/:id', putMeme);
+router.post('/', validateCreateMeme, validationHandler, createMeme);
+router.delete('/:id', validateDeleteMeme, validationHandler, deleteMeme);
+router.put('/:id', validateUpdateMeme, validationHandler, putMeme);
+

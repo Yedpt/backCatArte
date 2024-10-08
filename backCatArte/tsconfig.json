@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2016", 
+    "target": "ES6", 
     "module": "commonjs",
-    "esModuleInterop": true,      //para los test
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
