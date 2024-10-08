@@ -1,7 +1,7 @@
 import request from 'supertest';
 import { app, server } from '../app';
 
-describe('POST /users', () => {
+describe('PUT /users', () => {
 
     afterAll((done) => {
     server.close(done);  
@@ -12,24 +12,24 @@ describe('POST /users', () => {
 
     const user = {
       id: 19,
-      name: 'Carlos',
-      description: 'caribe',
+      name: 'Maria',
+      description: 'Ucraniana',
       category: 'Cat',
       image: ' ',
-      date: 'tu como estas',
-      likes: 26,
+      date: 'yo bien, gracias',
+      likes: 32,
 
     };
 
     const response = await request(app)
 
-      .post('/api/memes')
+      .put('/api/memes/19')
       .send(user)  
       .set('Content-Type', 'application/json');  
 
        expect(response.statusCode).toBe(200);
 
        expect(response.headers['content-type']).toContain('application/json');
-       
+
   });
 });
