@@ -1,7 +1,7 @@
 import  request  from "supertest";
 import { app, server }  from "../app";
 
-describe ('POST /users', () => {
+describe ('PUT /users', () => {
 
     test('should create a new user', async () =>{
 
@@ -11,8 +11,8 @@ describe ('POST /users', () => {
             description: 'nose que poner',
             category: 'Cat',
             image: ' ',
-            date: 'holaaa',
-            likes: 56
+            date: 'no se qque poner',
+            likes: 70
 
         }
 
