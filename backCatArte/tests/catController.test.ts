@@ -1,28 +1,35 @@
-import  request  from "supertest";
-import { app, server }  from "../app";
+import request from 'supertest';
+import { app, server } from '../app';
 
-describe ('PUT /users', () => {
+describe('POST /users', () => {
 
-    test('should create a new user', async () =>{
+    afterAll((done) => {
+    server.close(done);  
 
-        const user = {
-            id: 22,
-            name: 'hola',        
-            description: 'nose que poner',
-            category: 'Cat',
-            image: ' ',
-            date: 'no se qque poner',
-            likes: 70
+  });
 
-        }
+  test('should create a new user', async () => {
 
-        const response = await request(app).post('/api/memes'); 
+    const user = {
+      id: 19,
+      name: 'Carlos',
+      description: 'caribe',
+      category: 'Cat',
+      image: ' ',
+      date: 'tu como estas',
+      likes: 26,
 
-        expect(response.statusCode).toBe(200);
-        expect(response.headers['content-type']).toContain('application/json')  
-    })
+    };
 
-    afterAll(()=>{
-        server.close();
-    })
-})
+    const response = await request(app)
+
+      .post('/api/memes')
+      .send(user)  
+      .set('Content-Type', 'application/json');  
+
+       expect(response.statusCode).toBe(200);
+
+       expect(response.headers['content-type']).toContain('application/json');
+       
+  });
+});
