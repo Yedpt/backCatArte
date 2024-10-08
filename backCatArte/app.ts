@@ -5,8 +5,6 @@ import cors from 'cors';
 import { router } from './routers/catRouter';
 import {PORT} from './config';
 
-
-
 export const app = express();
 
 app.use(cors({
