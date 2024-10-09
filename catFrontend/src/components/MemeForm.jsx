@@ -65,8 +65,12 @@ const MemeForm = ({ onSubmit, initialData, onClose, submitButtonText }) => {
                 likes: initialData?.likes || 0, // Si estás editando un meme, conserva los likes actuales, si no, inicialízalos en 0
             }
             try {
-                 const response = await axios.post('http://localhost:3000/api/memes', memeData);
-                 console.log('respuesta del servidor:', response.data);
+                await axios.post('http://localhost:3000/api/memes', memeData);
+               
+                //  console.log('respuesta del servidor:', response.data);
+                
+                
+                
                 reset()
                 if (typeof onClose === 'function') {
                     onClose()
