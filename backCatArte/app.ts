@@ -5,9 +5,7 @@ import cors from 'cors';
 import { router } from './routers/catRouter';
 import {PORT} from './config';
 
-
-
-const app = express();
+export const app = express();
 
 app.use(cors({
   origin: 'http://localhost:5173', // el localhost donde esta corriendo el front
@@ -17,11 +15,11 @@ app.use(express.json());
 app.use('/api/memes', router);
 
   try {
-     conectionDB.authenticate();  // Autheticas the database
+    conectionDB.authenticate();  // Autheticas the database
     console.log('Conexión a la base de datos exitosa');
 
     // Fetch all memes
-    catMeme.sync({ force: false });
+   catMeme.sync({ force: false });
    console.log('Tabla de memes creada');
 
   } catch (error) {
@@ -29,6 +27,7 @@ app.use('/api/memes', router);
   }
 
 
-app.listen((PORT || 3000), () => {
+export const server = app.listen((PORT || 3000), () => {
   console.log(`Servidor corriendo en el puerto http://localhost:${PORT}/`);;
 });
+
