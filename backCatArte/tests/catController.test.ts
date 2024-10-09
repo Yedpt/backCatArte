@@ -1,5 +1,6 @@
 import request from 'supertest';
 import { app, server } from '../app';
+import catMeme from '../models/catModel';
 
 
 //Test Get
@@ -23,8 +24,8 @@ describe('crud memes', () => {
   
       
       
-        name: "Enmanuel Feliciano",
-        description: "si, tengo 18 años",
+        name: "Celia",
+        description: "si, tengo 32 años",
         category: "gatos_siendo_gatos1",
         image: "/src/assets/gatos-siendo-gatos1/gatos101.jpg",
         date: "2008-07-13",
@@ -50,7 +51,7 @@ describe('crud memes', () => {
     test ('should update a user', async () => {
 
     const user = {
-      name: "carlos",
+      name: "test",
       description: "si, tengo 100 años",
       category: "gatos_siendo_gatos1",
       image: "/src/assets/gatos-siendo-gatos1/gatos101.jpg",
@@ -59,7 +60,7 @@ describe('crud memes', () => {
    };
    const response = await request(app)
 
-   .put('/api/memes/12')
+   .put('/api/memes/3')
    .send(user)
    .set('Content-Type', 'application/json');
 
@@ -73,11 +74,18 @@ describe('crud memes', () => {
 
     test ('should delete a user', async () => {
 
-        
+        const memeToDelete = await catMeme.create({
+            name: "test",
+            description: "todo test",
+            category: "test",
+            image: "/src/assets/gatos-siendo-gatos1/gatos101.jpg",
+            date: "2008-07-13",
+            likes: 102
+         });
 
     const response = await request(app)
 
-    .delete('/api/memes/11')
+    .delete(`/api/memes/${memeToDelete.id}`)
      
     .set('Content-Type', 'application/json');  
 
