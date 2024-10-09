@@ -59,7 +59,7 @@ describe('crud memes', () => {
    };
    const response = await request(app)
 
-   .put('/api/memes/')
+   .put('/api/memes/1')
    .send(user)
    .set('Content-Type', 'application/json');
 
