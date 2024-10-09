@@ -46,20 +46,20 @@ describe('crud memes', () => {
     });
 
     //Test Put
-    
+
     test ('should update a user', async () => {
 
     const user = {
-      name: "Jose Jose",
-      description: "si, tengo 78 años",
+      name: "carlos",
+      description: "si, tengo 100 años",
       category: "gatos_siendo_gatos1",
       image: "/src/assets/gatos-siendo-gatos1/gatos101.jpg",
       date: "2008-07-13",
-      likes: 101
+      likes: 132
    };
    const response = await request(app)
 
-   .put('/api/memes/')
+   .put('/api/memes/12')
    .send(user)
    .set('Content-Type', 'application/json');
 
