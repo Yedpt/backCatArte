@@ -1,6 +1,7 @@
 import request from 'supertest';
 import { app, server } from '../app';
 
+
 //Test Get
 
 describe('crud memes', () => {
@@ -19,13 +20,16 @@ describe('crud memes', () => {
   test('should create a new user', async () => {
 
     const user = {
-        id: 19,
-        name: 'Maria',
-        description: 'Ucraniana',
-        category: 'Cat',
-        image: ' ',
-        date: 'yo bien, gracias',
-        likes: 32,
+  
+      
+      
+        name: "Enmanuel Feliciano",
+        description: "si, tengo 18 años",
+        category: "gatos_siendo_gatos1",
+        image: "/src/assets/gatos-siendo-gatos1/gatos101.jpg",
+        date: "2008-07-13",
+        likes: 85
+      
   
       };
     
@@ -42,20 +46,20 @@ describe('crud memes', () => {
     });
 
     //Test Put
+    
     test ('should update a user', async () => {
 
     const user = {
-        id: 88,
-        name: 'Jose',
-        description: 'Mexicano',
-        category: 'Cat',
-        image: ' ',
-        date: 'nada que temer',
-        likes: 32,
+      name: "Jose Jose",
+      description: "si, tengo 78 años",
+      category: "gatos_siendo_gatos1",
+      image: "/src/assets/gatos-siendo-gatos1/gatos101.jpg",
+      date: "2008-07-13",
+      likes: 101
    };
    const response = await request(app)
 
-   .put('/api/memes/88')
+   .put('/api/memes/1')
    .send(user)
    .set('Content-Type', 'application/json');
 
@@ -65,25 +69,16 @@ describe('crud memes', () => {
 
 });
 
-//Test Delete
+// //Test Delete
 
     test ('should delete a user', async () => {
 
-        const user = {
-        id: 88,
-        name: 'Jose',
-        description: 'Mexicano',
-        category: 'Cat',
-        image: ' ',
-        date: 'nada que temer',
-        likes: 32,
-
-      };
+        
 
     const response = await request(app)
 
-    .delete('/api/memes/88')
-    .send(user)  
+    .delete('/api/memes/11')
+     
     .set('Content-Type', 'application/json');  
 
      expect(response.statusCode).toBe(200);
