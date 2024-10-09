@@ -5,7 +5,7 @@ export const validateCreateMeme = [
   check('description').notEmpty().withMessage('La descripción es obligatoria'),
   check('category').notEmpty().withMessage('La categoría es obligatoria'),
   check('image').matches(/^(https?:\/\/|\/)/).withMessage('La imagen debe ser una URL válida o una ruta local'),
-  check('date').isISO8601().withMessage('La fecha debe ser una fecha válida'),
+  check('date').optional().isISO8601().withMessage('La fecha debe ser una fecha válida'),
   check('likes').isInt({ min: 0 }).withMessage('Los likes deben ser un número entero positivo'),
 ];
 
