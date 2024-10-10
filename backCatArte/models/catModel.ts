@@ -5,7 +5,7 @@ import { CatMeme } from '../Interfaces/catInterfaces';
 // Definición de los atributos de Book
 
 interface catMeme extends Model<CatMeme>, CatMeme {}
- const catMeme = conectionDB.define('catMeme', { // aqui cambia el mongo
+ const catMeme = conectionDB.define('catMeme', { // aqui cambia el mongodb
 
   id: {
     type: DataTypes.INTEGER,
