@@ -1,7 +1,7 @@
 // models/Book.ts
 import { DataTypes, Model} from 'sequelize';
 import conectionDB from '../database/conectionDB'; // Importa tu conexión a la base de datos
-import { CatMeme } from '../interfaces/catInterfaces';
+import { CatMeme } from '../Interfaces/catInterfaces';
 // Definición de los atributos de Book
 
 interface catMeme extends Model<CatMeme>, CatMeme {}
