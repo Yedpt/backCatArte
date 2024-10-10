@@ -160,6 +160,120 @@ PORT=3000
 ````
 npm run test
 ````
+#### Tambien se ha añadido una carperta de Interfaces donde se crea un archivo interfaces con el siguiente comando para usarlo en el Model:
+````
+export interface CatMeme {
+    id?: number
+    name: string;
+    description: string;
+    category: string;
+    image: string;
+    date?: Date | string;
+    likes: number;
+  }
+````
+###En las validaciones hacemos un paso sencillo  de la siguiente forma:
+##### Creamos una carpeta para la validacion y haremos un archivo ej: 
+nombre_de_tu_archivoValidator.ts
+##### para continuar  pegas el siguiente cofigo en tu archivo y modificas segun tus preferencias:
+````
+import { Request, Response, NextFunction } from 'express';
+import { validationResult } from 'express-validator';
+
+export const validationHandler = (req: Request, res: Response, next: NextFunction) => {
+  const errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array()
+    });
+  }
+  next();
+};
+````
+### Pasamos a la sincronizacion del Frontend y el Backend
+
+  El Front se une enlazando el servidor del backend al front atraves de una variable en donde se guarda el localhost , más las peticiones que recibe el controlador del front y trae la información de la Base de Datos y manda esa respuesta al Front. 
+  
+  Donde por medio de la URL del front  donde se guarda el localhost del backend.
+  ````
+  const BaseUrl = "http://localhost:3000/api/memes"; 
+  ````
+  ####Este seria el codigo completo del Front en el archivo de services.js:
+````
+import axios from "axios";
+
+const BaseUrl = "http://localhost:3000/api/memes"; // Cambia por la URL de tu API si es necesario
+
+// GET Obtener todos los memes
+export const getMemes = async () => {
+  try {
+    // Agregamos un parámetro de consulta aleatorio a la URL
+    const response = await axios.get(BaseUrl + "?_=" + new Date().getTime());
+    return response.data;
+  } catch (error) {
+    console.error("Error al obtener los memes:", error);
+    throw error;
+  }
+};
+
+// Obtener un meme por ID
+export const getMemeById = async (id) => {
+  try {
+    const response = await axios.get(`${BaseUrl}/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error al obtener el meme:", error);
+    throw error;
+  }
+};
+
+// Obtener memes por categoría
+export const getMemeByCategory = async (category) => {
+  try {
+    const response = await axios.get(
+      `${BaseUrl}?category=${encodeURIComponent(category)}`
+    );
+    console.log("Respuesta de la API por categoría:", response.data); // Verifica la respuesta
+    return response.data;
+  } catch (error) {
+    console.error("Error al obtener memes por categoría:", error);
+    throw error;
+  }
+};
+
+// POST Crear un nuevo meme
+export const createMeme = async (memeData) => {
+  try {
+    const response = await axios.post(BaseUrl, memeData);
+    return response.data;
+  } catch (error) {
+    console.error("Error al crear el meme:", error);
+    throw error;
+  }
+};
+
+// Actualizar un meme existente por ID
+export const updateMeme = async (id, updatedMemeData) => {
+  try {
+    const response = await axios.put(`${BaseUrl}/${id}`, updatedMemeData);
+    return response.data;
+  } catch (error) {
+    console.error("Error al actualizar el meme:", error);
+    throw error;
+  }
+};
+
+// Eliminar un meme por ID
+export const deleteMeme = async (id) => {
+  try {
+    await axios.delete(`${BaseUrl}/${id}`);
+  } catch (error) {
+    console.error("Error al eliminar el meme:", error);
+    throw error;
+  }
+};
+````
+
 
 ## 🔮 Mirando al futuro
 
