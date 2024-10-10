@@ -1,10 +1,17 @@
 // models/Book.ts
-import { DataTypes} from 'sequelize';
+import { DataTypes, Model} from 'sequelize';
 import conectionDB from '../database/conectionDB'; // Importa tu conexión a la base de datos
-
+import { CatMeme } from '../Interfaces/catInterfaces';
 // Definición de los atributos de Book
-const catMeme  = conectionDB.define('catMeme', { // aqui cambia el mongo
 
+interface catMeme extends Model<CatMeme>, CatMeme {}
+ const catMeme = conectionDB.define('catMeme', { // aqui cambia el mongo
+
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true,
+  },
   name: {
     type: DataTypes.STRING,
     allowNull: false,
