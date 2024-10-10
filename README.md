@@ -39,6 +39,26 @@ Esto iniciará un servidor en tu localhost que servirá como nuestra API fake.
 
 Puedes abrir `index.html` en tu navegador para ver la aplicación en funcionamiento.
 
+## Instalaciones
+
+Para comenzar, debes instalar las siguientes dependencias junto con sus tipos en un proyecto de TypeScript:
+
+## Instalación de dependencias principales
+````
+npm install express sequelize mysql2 dotenv
+````
+## Instalación de TypeScript y sus tipos
+````
+npm install --save-dev typescript @types/node @types/express @types/dotenv
+````
+## Instalación de express-validator
+````
+npm install express-validator
+````
+## Instalación de jest y supertest para pruebas
+````
+npm install --save-dev jest supertest @types/jest @types/supertest
+````
 
 ## Imágenes de la Web 🌅
 
@@ -73,7 +93,73 @@ Controlador: La lógica de negocio que conecta el modelo y la vista.
 # Estructura de Carpetas
 
 
+├── /src
+│   ├── /config
+│   │   └── database.ts -- **Configuración de Sequelize**
 
+│   │
+
+
+│   ├── /controllers
+│   │   └── memeController.ts -- **Controlador para la lógica de memes**
+
+│   │
+
+
+│   ├── /models
+│   │   └── Meme.ts --     **Modelo meme de sequilize**
+
+│   │
+
+
+│   ├── /routes
+│   │   └── memeRoutes.ts --    **Rutas relacionadas a memes**
+
+│   │
+
+
+│   ├── /middlewares
+│   │   └── validation.ts --   **Validaciones de Express Validator**
+
+│   │
+
+
+│   ├── /tests
+│   │   └── meme.test.ts --  **Pruebas para los endpoints de memes**
+
+## Ahora vamos con la parte del  testing
+
+##### Despues que instalas MySQL Workbench creas una database con el siguiente comando:
+````
+CREATE DATABASE nombre_de_tu_base de datos;
+````
+##### Luego colocate en la linea y haz un **Ctrl + Enter** para verificar que se cree de manera correcta.
+
+##### Depues pones el siguiente comando para crear una tabla :
+````
+CREATE TABLE nombre_de_la_tabla (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    columna1 VARCHAR(255) NOT NULL,
+    columna2 INT,
+    columna3 DATE,);
+````
+#####Eso es para hacer las columnas y especiificarle su tipo de dato, y haces el mismo comando sobre la linea Ctrl +Enter para verificar
+
+### luego vas al proyecto y en tu archivo .env pones lo siguiente:
+````
+DB_PASSWORD = tu_ contraseña_de_MySQL
+DB_HOST=localhost
+DB_USER= tu_usuario
+DB_DEV_NAME= nombre_de_tu_base de dtos
+DB_PORT=3306
+PORT=3000
+````
+
+###  Iniciar el Test
+   ##### En la consola ejecutas el siguiente comando:
+````
+npm run test
+````
 
 ## 🔮 Mirando al futuro
 
