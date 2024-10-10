@@ -70,6 +70,7 @@ En el siguiente link se tiene acceso a la documentación de POSTMAN del proyecto
 [![Postman](https://img.shields.io/badge/Postman-F65E1D?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/): Herramienta para documentar y probar los endpoints de la API.
 
 ## Arquitectura 🛠️
+
 La aplicación sigue una arquitectura MVC (Modelo-Vista-Controlador):
 
 Modelo: Define la estructura de los datos y las interacciones con la base de datos (Sequelize).
@@ -78,20 +79,18 @@ Vista: Los endpoints de la API que exponen los datos y las funcionalidades (Expr
 
 Controlador: La lógica de negocio que conecta el modelo y la vista.
 
-# Estructura de Carpetas
+## Estructura de Carpetas
 
 ## Mirando al futuro 🔮
+
 Todo proyecto requiere de mejoras, se tienen identificadan las siguientes:
 
 -
-
--
-
 -
 
 Si estás interesado en contribuir a este proyecto, te invitamos a clonar el repositorio y crear una rama para tus cambios. ¡Tu ayuda es muy valorada!
 
-# Autores ✒️
+## Autores ✒️
 
 Ana Maria Garcia - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AnaMaria-Sole) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ana-maria-graphicdesigner/)
 
@@ -103,6 +102,6 @@ Enmanuel Feliciano - [![GitHub](https://img.shields.io/badge/GitHub-100000?style
 
 Wilder Aguilar - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Wilder-Aguilar) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilderaguilar/)
 
-# Licencia 📄
+## Licencia 📄
 
-Este proyecto está bajo la Licencia ((Tu Licencia)) 
+Este proyecto está bajo la Licencia - Tu Licencia
