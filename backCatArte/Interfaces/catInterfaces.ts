@@ -1,5 +1,5 @@
 export interface CatMeme {
-    id?: number
+    id?: number;
     name: string;
     description: string;
     category: string;
