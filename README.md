@@ -228,8 +228,7 @@ export const validationHandler = (req: Request, res: Response, next: NextFunctio
   ````
   const BaseUrl = "http://localhost:3000/api/memes"; 
   ````
- 
-  #### Este seria el codigo completo del Front en el archivo de services.js:
+#### Este seria el codigo completo del Front en el archivo de services.js:
   
 ````
 import axios from "axios";
@@ -303,8 +302,7 @@ export const deleteMeme = async (id) => {
     console.error("Error al eliminar el meme:", error);
     throw error;
   }
-};
-
+}
 
 ## 🔮 Mirando al futuro
 
