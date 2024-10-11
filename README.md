@@ -303,6 +303,7 @@ export const deleteMeme = async (id) => {
     throw error;
   }
 }
+  ````
 
 ## 🔮 Mirando al futuro
 
