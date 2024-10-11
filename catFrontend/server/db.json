@@ -430,62 +430,6 @@
       "image": "/src/assets/me-dijiste4/medijiste412.jpg",
       "date": "2010-01-26",
       "likes": 52
-    },
-    {
-      "id": "2284",
-      "name": "eee",
-      "description": "ddd",
-      "category": "gatos_siendo_gatos1",
-      "image": "https://res.cloudinary.com/dv2jxa9lw/image/upload/v1726736926/l44zrp0outqtwxijtu0l.jpg",
-      "likes": 1
-    },
-    {
-      "id": "85ad",
-      "name": "yeder",
-      "description": "fasfd",
-      "category": "gatos_siendo_gatos1",
-      "image": "https://res.cloudinary.com/dv2jxa9lw/image/upload/v1727776963/xzuhnilvxnnwft2tgrn6.jpg",
-      "likes": 0
-    },
-    {
-      "id": "f29c",
-      "name": "dads",
-      "description": "adsadas",
-      "category": "gatos_siendo_humanos2",
-      "image": "https://res.cloudinary.com/yederpt/image/upload/v1727777317/fku0bldd0nodxy7un8ds.jpg",
-      "likes": 0
-    },
-    {
-      "id": "3f0a",
-      "name": "gafas",
-      "description": "sada",
-      "category": "gatos_siendo_humanos2",
-      "image": "https://res.cloudinary.com/yederpt/image/upload/v1727777603/ecyu2gmbwtqvyzk1fwpp.jpg",
-      "likes": 0
-    },
-    {
-      "id": "f57d",
-      "name": "fafas",
-      "description": "sadasdsa",
-      "category": "gatos_siendo_humanos2",
-      "image": "https://res.cloudinary.com/yederpt/image/upload/v1728213069/l2fyvqkudfpkih9riacw.jpg",
-      "likes": 0
-    },
-    {
-      "id": "20a7",
-      "name": "prueba",
-      "description": "prueba",
-      "category": "gatos_siendo_gatos1",
-      "image": "https://res.cloudinary.com/yederpt/image/upload/v1728216498/xscol7ejww4uvo9j3st5.jpg",
-      "likes": 0
-    },
-    {
-      "id": "9667",
-      "name": "sadsa",
-      "description": "sadsads",
-      "category": "gatos_siendo_humanos2",
-      "image": "https://res.cloudinary.com/yederpt/image/upload/v1728226704/y853ehwpryvfy1htvkph.jpg",
-      "likes": 0
     }
   ]
 }

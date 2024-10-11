@@ -1,17 +1,20 @@
 import { Request, Response } from 'express';
-import catMeme from '../models/catModel.js'
+import catMeme from '../models/catModel'
 
 //CRUD
 //READ - GET
 
 export const getAllMemes = async (req: Request, res: Response) => {
   try {
-    const meme = await catMeme.findAll();
+    const meme = await catMeme.findAll(); // aqui cambia el metodo mongo
     res.json(meme);
   } catch (error) {
     res.json({ message: "Ha ocurrido un error", error });
   }
 };
+
+
+//obtener meme POR ID
 
 //CREATE - POST
 export const createMeme = async (req: Request, res: Response) => {
@@ -38,8 +41,14 @@ export const deleteMeme = async (req: Request, res: Response) => {
   try {
     const memeId = req.params.id;
     const meme = await catMeme.findByPk(memeId)
+
+    if (!meme) {
+      return res.status(404).json({ message: 'El meme no existe' });
+    }
+    
     await meme?.destroy();
     res.json(meme);
+    
   } catch (error) {
     console.log('El meme no se pudo eliminar', error);
   }
