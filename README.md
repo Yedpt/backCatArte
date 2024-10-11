@@ -93,7 +93,7 @@ A continuación se presenta imagenes del proyecto en funcionamiento:...
 
 [![Express Validator](https://img.shields.io/badge/Express%20Validator-blue?style=for-the-badge&logo=express&logoColor=white)](https://www.npmjs.com/package/express-validator): Middleware para validar los datos de entrada a los endpoints.
 
-[![Jest](https://img.shields.io/badge/Jest-blue?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/): Framework de testing y herramienta para realizar pruebas unitarias y de integración.
+[![Jest](https://img.shields.io/badge/Jest-blue?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/) [![Supertst](https://img.shields.io/badge/Supertst-blue?style=for-the-badge&logo=supertest&logoColor=white)](https://supertest.js.org/): Framework de testing y herramienta para realizar pruebas unitarias y de integración.
 
 [![Postman](https://img.shields.io/badge/Postman-F65E1D?style=for-the-badge&logo=postman&logoColor=white)](https://www.postman.com/): Herramienta para documentar y probar los endpoints de la API.
 
@@ -301,13 +301,13 @@ export const deleteMeme = async (id) => {
 Todo proyecto requiere de mejoras, se tiene identificada la ... si estás interesado en contribuir a esta función, te invito a clonar el repositorio y crear una rama para tus cambios. ¡Tu ayuda es muy valorada!
 
 # Autores ✒️
-Ana Maria Garcia - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+Ana Maria Garcia - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anagarciaarcia/)
 
-Yeder Pimentel - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+Yeder Pimentel - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yeder-pimentel/)
 
-Omar Lengua - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+Omar Lengua - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/omarlengua/)
 
-Enmanuel Feliciano - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com)
+Enmanuel Feliciano - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enmanuelfeliciano/)
 
 Wilder Aguilar - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Wilder-Aguilar) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilderaguilar/)
 
