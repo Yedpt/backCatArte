@@ -62,9 +62,30 @@ npm install --save-dev jest supertest @types/jest @types/supertest
 
 ## Imágenes de la Web 🌅
 
-A continuación se presentea imagenes del poryecto en funcionamiento:...
+A continuación se presenta imagenes del poryecto en funcionamiento:...
 
 
+
+<img width="214" alt="test pass" src="https://github.com/user-attachments/assets/ef3dc929-a2aa-4702-b0f6-4e53841fde92">
+
+
+
+
+<img width="300" alt="capture MySQL" src="https://github.com/user-attachments/assets/2156d62f-777e-49ac-8f4a-9d7598b5ffd7">
+
+
+
+
+
+
+ Tambien te tenemos una documentacion breve sobre el **Museo Vitual meCat** 
+ y las funciones del postman en documentacion y en video para que puedas ver la presentacion de manera mas visual:
+ 
+- [Documentacion-Postman](http://https://documenter.getpostman.com/view/37812250/2sAXqzXymS. "Documentacion-Postman")👈📖
+
+- [Video-Postman](http://https://youtu.be/He1ewiLILxo "Video-Postman")👈📹
+
+- [Museo Virtual-General](http://https://www.youtube.com/watch?v=p0XRk3Gknc4 "Museo Virtual-General")👈🏛️
 
 ## 💻 Tecnologías empleadas
 
@@ -143,9 +164,9 @@ CREATE TABLE nombre_de_la_tabla (
     columna2 INT,
     columna3 DATE,);
 ````
-#####Eso es para hacer las columnas y especiificarle su tipo de dato, y haces el mismo comando sobre la linea Ctrl +Enter para verificar
+##### Eso es para hacer las columnas y especiificarle su tipo de dato, y haces el mismo comando sobre la linea Ctrl +Enter para verificar
 
-### luego vas al proyecto y en tu archivo .env pones lo siguiente:
+#### luego vas al proyecto y en tu archivo .env pones lo siguiente:
 ````
 DB_PASSWORD = tu_ contraseña_de_MySQL
 DB_HOST=localhost
@@ -172,8 +193,12 @@ export interface CatMeme {
     likes: number;
   }
 ````
-###En las validaciones hacemos un paso sencillo  de la siguiente forma:
-##### Creamos una carpeta para la validacion y haremos un archivo ej: 
+##  En las validaciones hacemos un paso sencillo  de la siguiente forma:
+
+### y por si te lo preguntas
+express-validator es una biblioteca que facilita la validación y sanitización de los datos en las peticiones HTTP. Sirve para asegurarse de que los datos que llegan a tu API cumplan con ciertos requisitos (formato, longitud, existencia, etc.). Esto es útil para proteger la aplicación de datos incorrectos, malintencionados o incompletos.
+
+### Creamos una carpeta para la validacion y haremos un archivo ej: 
 nombre_de_tu_archivoValidator.ts
 ##### para continuar  pegas el siguiente cofigo en tu archivo y modificas segun tus preferencias:
 ````
@@ -198,7 +223,7 @@ export const validationHandler = (req: Request, res: Response, next: NextFunctio
   ````
   const BaseUrl = "http://localhost:3000/api/memes"; 
   ````
-  ####Este seria el codigo completo del Front en el archivo de services.js:
+  #### Este seria el codigo completo del Front en el archivo de services.js:
 ````
 import axios from "axios";
 
