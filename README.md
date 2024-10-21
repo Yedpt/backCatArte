@@ -35,30 +35,25 @@ Para comenzar, debes instalar las siguientes dependencias junto con sus tipos en
 
 ## Instalación de dependencias principales
 
-````
+````bash
 npm install express sequelize mysql2 dotenv
 ````
 
 ## Instalación de TypeScript y sus tipos
 
-## Instalaciones
-
-Para comenzar, debes instalar las siguientes dependencias junto con sus tipos en un proyecto de TypeScript:
-
-## Instalación de dependencias principales
-````
-npm install express sequelize mysql2 dotenv
-````
-## Instalación de TypeScript y sus tipos
-````
+````bash
 npm install --save-dev typescript @types/node @types/express @types/dotenv
 ````
+
 ## Instalación de express-validator
-````
+
+````bash
 npm install express-validator
 ````
+
 ## Instalación de jest y supertest para pruebas
-````
+
+````bash
 npm install --save-dev jest supertest @types/jest @types/supertest
 ````
 
@@ -66,26 +61,18 @@ npm install --save-dev jest supertest @types/jest @types/supertest
 
 A continuación se presenta imagenes del proyecto en funcionamiento:...
 
-
 <img width="214" alt="test pass" src="https://github.com/user-attachments/assets/ef3dc929-a2aa-4702-b0f6-4e53841fde92">
-
-
-
 
 <img width="300" alt="capture MySQL" src="https://github.com/user-attachments/assets/2156d62f-777e-49ac-8f4a-9d7598b5ffd7">
 
-
-
-
- Tambien te tenemos una documentacion breve sobre el **Museo Vitual meCat** 
+ Tambien te tenemos una documentacion breve sobre el **Museo Vitual meCat**
  y las funciones del postman en documentacion y en video para que puedas ver la presentacion de manera mas visual:
- 
+
 - [Documentacion-Postman](https://documenter.getpostman.com/view/37812250/2sAXqzXymS "Documentacion-Postman")👈📖
 
 - [Video-Postman](https://youtu.be/He1ewiLILxo "Video-Postman")👈📹
 
 - [Museo Virtual-General](https://www.youtube.com/watch?v=p0XRk3Gknc4 "Museo Virtual-General")👈🏛️
-
 
 ## 💻 Tecnologías empleadas
 
@@ -111,7 +98,7 @@ Vista: Los endpoints de la API que exponen los datos y las funcionalidades (Expr
 
 Controlador: La lógica de negocio que conecta el modelo y la vista.
 
-# Estructura de Carpetas
+## Estructura de Carpetas
 
 ├── /src
 │   ├── /config
@@ -124,55 +111,55 @@ Controlador: La lógica de negocio que conecta el modelo y la vista.
 │   │   └── database.ts -- **Configuración de Sequelize**
 
 │   │
-
 
 │   ├── /controllers
 │   │   └── memeController.ts -- **Controlador para la lógica de memes**
 
 │   │
 
-
 │   ├── /models
 │   │   └── Meme.ts --     **Modelo meme de sequilize**
 
 │   │
-
 
 │   ├── /routes
 │   │   └── memeRoutes.ts --    **Rutas relacionadas a memes**
 
 │   │
 
-
 │   ├── /middlewares
 │   │   └── validation.ts --   **Validaciones de Express Validator**
 
 │   │
-
 
 │   ├── /tests
 │   │   └── meme.test.ts --  **Pruebas para los endpoints de memes**
 
 ## Ahora vamos con la parte del  testing
 
-##### Después que instalas MySQL Workbench creas una database con el siguiente comando:
-````
+### Después que instalas MySQL Workbench creas una database con el siguiente comando
+
+````bash
 CREATE DATABASE nombre_de_tu_base de datos;
 ````
-##### Luego colocate en la linea y haz un **Ctrl + Enter** para verificar que se cree de manera correcta.
 
-##### Después pones el siguiente comando para crear una tabla :
-````
+### Luego colocate en la linea y haz un **Ctrl + Enter** para verificar que se cree de manera correcta
+
+### Después pones el siguiente comando para crear una tabla
+
+````bash
 CREATE TABLE nombre_de_la_tabla (
     id INT AUTO_INCREMENT PRIMARY KEY,
     columna1 VARCHAR(255) NOT NULL,
     columna2 INT,
     columna3 DATE,);
 ````
-##### Eso es para hacer las columnas y especiificarle su tipo de dato, y haces el mismo comando sobre la linea Ctrl +Enter para verificar
 
-#### luego vas al proyecto y en tu archivo .env pones lo siguiente:
-````
+### Eso es para hacer las columnas y especiificarle su tipo de dato, y haces el mismo comando sobre la linea Ctrl +Enter para verificar
+
+### luego vas al proyecto y en tu archivo .env pones lo siguiente
+
+````bash
 DB_PASSWORD = tu_ contraseña_de_MySQL
 DB_HOST=localhost
 DB_USER= tu_usuario
@@ -181,13 +168,17 @@ DB_PORT=3306
 PORT=3000
 ````
 
-###  Iniciar el Test
-   ##### En la consola ejecutas el siguiente comando:
-````
+### Iniciar el Test
+
+### En la consola ejecutas el siguiente comando
+
+````bash
 npm run test
 ````
-#### Tambien se ha añadido una carperta de Interfaces donde se crea un archivo interfaces con el siguiente comando para usarlo en el Model:
-````
+
+### Tambien se ha añadido una carperta de Interfaces donde se crea un archivo interfaces con el siguiente comando para usarlo en el Model
+
+````bash
 export interface CatMeme {
     id?: number
     name: string;
@@ -198,15 +189,20 @@ export interface CatMeme {
     likes: number;
   }
 ````
-##  En las validaciones hacemos un paso sencillo  de la siguiente forma:
 
-### y por si te lo preguntas
+## En las validaciones hacemos un paso sencillo  de la siguiente forma
+
+## y por si te lo preguntas
+
 express-validator es una biblioteca que facilita la validación y sanitización de los datos en las peticiones HTTP. Sirve para asegurarse de que los datos que llegan a tu API cumplan con ciertos requisitos (formato, longitud, existencia, etc.). Esto es útil para proteger la aplicación de datos incorrectos, malintencionados o incompletos.
 
-### Creamos una carpeta para la validacion y haremos un archivo ej: 
+### Creamos una carpeta para la validacion y haremos un archivo ej
+
 nombre_de_tu_archivoValidator.ts
-##### para continuar  pegas el siguiente cofigo en tu archivo y modificas segun tus preferencias:
-````
+
+### para continuar  pegas el siguiente cofigo en tu archivo y modificas segun tus preferencias
+
+````bash
 import { Request, Response, NextFunction } from 'express';
 import { validationResult } from 'express-validator';
 
@@ -220,17 +216,20 @@ export const validationHandler = (req: Request, res: Response, next: NextFunctio
   next();
 };
 ````
+
 ### Pasamos a la sincronizacion del Frontend y el Backend
 
-  El Front se une enlazando el servidor del backend al front atraves de una variable en donde se guarda el localhost , más las peticiones que recibe el controlador del front y trae la información de la Base de Datos y manda esa respuesta al Front. 
+  El Front se une enlazando el servidor del backend al front atraves de una variable en donde se guarda el localhost , más las peticiones que recibe el controlador del front y trae la información de la Base de Datos y manda esa respuesta al Front.
   
   Donde por medio de la URL del front  donde se guarda el localhost del backend.
-  ````
+
+  ````bash
   const BaseUrl = "http://localhost:3000/api/memes"; 
   ````
-#### Este seria el codigo completo del Front en el archivo de services.js:
+
+#### Este seria el codigo completo del Front en el archivo de services.js
   
-````
+````bash
 import axios from "axios";
 
 const BaseUrl = "http://localhost:3000/api/memes"; // Cambia por la URL de tu API si es necesario
@@ -309,7 +308,8 @@ export const deleteMeme = async (id) => {
 
 Todo proyecto requiere de mejoras, se tiene identificada la ... si estás interesado en contribuir a esta función, te invito a clonar el repositorio y crear una rama para tus cambios. ¡Tu ayuda es muy valorada!
 
-# Autores ✒️
+## Autores ✒️
+
 Ana Maria Garcia - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anagarciaarcia/)
 
 Yeder Pimentel - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yeder-pimentel/)
@@ -320,5 +320,6 @@ Enmanuel Feliciano - [![GitHub](https://img.shields.io/badge/GitHub-100000?style
 
 Wilder Aguilar - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Wilder-Aguilar) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilderaguilar/)
 
-# Licencia 📄
-Este proyecto está bajo la Licencia ((Tu Licencia))
+## Licencia 📄
+
+Este proyecto está bajo la Licencia (Tu Licencia)
