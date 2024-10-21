@@ -66,7 +66,7 @@ A continuación se presenta imagenes del proyecto en funcionamiento:...
 <img width="300" alt="capture MySQL" src="https://github.com/user-attachments/assets/2156d62f-777e-49ac-8f4a-9d7598b5ffd7">
 
  Tambien te tenemos una documentacion breve sobre el **Museo Vitual meCat**
- y las funciones del postman en documentacion y en video para que puedas ver la presentacion de manera mas visual:
+ y las funciones del postman en documentacion y en video para que puedas ver la presentacion:
 
 - [Documentacion-Postman](https://documenter.getpostman.com/view/37812250/2sAXqzXymS "Documentacion-Postman")👈📖
 
@@ -176,7 +176,7 @@ PORT=3000
 npm run test
 ````
 
-### Tambien se ha añadido una carperta de Interfaces donde se crea un archivo interfaces con el siguiente comando para usarlo en el Model
+### También se ha añadido una carperta de Interfaces donde se crea un archivo interfaces con el siguiente comando para usarlo en el Model
 
 ````bash
 export interface CatMeme {
@@ -196,47 +196,13 @@ export interface CatMeme {
 
 express-validator es una biblioteca que facilita la validación y sanitización de los datos en las peticiones HTTP. Sirve para asegurarse de que los datos que llegan a tu API cumplan con ciertos requisitos (formato, longitud, existencia, etc.). Esto es útil para proteger la aplicación de datos incorrectos, malintencionados o incompletos.
 
-### Creamos una carpeta para la validacion y haremos un archivo ej
+### Creamos una carpeta para la validación y haremos un archivo ej
 
 nombre_de_tu_archivoValidator.ts
-<<<<<<< HEAD
 
-### para continuar  pegas el siguiente cofigo en tu archivo y modificas segun tus preferencias
+### para continuar pegas el siguiente código en tu archivo y modificas segun tus preferencias
 
 ````bash
-=======
-##### para continuar  pegas el siguiente cofigo en tu archivo y modificas segun tus preferencias:
-````
-import { check, param } from 'express-validator';
-
-export const validateCreateMeme = [
-  check('name').notEmpty().withMessage('El nombre es obligatorio'),
-  check('description').notEmpty().withMessage('La descripción es obligatoria'),
-  check('category').notEmpty().withMessage('La categoría es obligatoria'),
-  check('image').matches(/^(https?:\/\/|\/)/).withMessage('La imagen debe ser una URL válida o una ruta local'),
-  check('date').optional().isISO8601().withMessage('La fecha debe ser una fecha válida'),
-  check('likes').isInt({ min: 0 }).withMessage('Los likes deben ser un número entero positivo'),
-];
-
-export const validateUpdateMeme = [
-  param('id').isInt().withMessage('El ID debe ser un número entero'),
-  check('name').optional().notEmpty().withMessage('El nombre es obligatorio'),
-  check('description').optional().notEmpty().withMessage('La descripción es obligatoria'),
-  check('category').optional().notEmpty().withMessage('La categoría es obligatoria'),
-  check('image').optional().matches(/^(https?:\/\/|\/)/).withMessage('La imagen debe ser una URL válida o una ruta local'),
-  check('date').optional().isISO8601().withMessage('La fecha debe ser una fecha válida'),
-  check('likes').optional().isInt({ min: 0 }).withMessage('Los likes deben ser un número entero positivo'),
-];
-
-export const validateDeleteMeme = [
-  param('id').isInt().withMessage('El ID debe ser un número entero'),
-];
-
-
-````
-### Y Creamos otro archivo para manejar la validacion:
-````
->>>>>>> e31082bad469a21bee00c6f63d16c1f17e73c5d4
 import { Request, Response, NextFunction } from 'express';
 import { validationResult } from 'express-validator';
 
@@ -251,11 +217,11 @@ export const validationHandler = (req: Request, res: Response, next: NextFunctio
 };
 ````
 
-### Pasamos a la sincronizacion del Frontend y el Backend
+### Pasamos a la sincronización del Frontend y el Backend
 
-  El Front se une enlazando el servidor del backend al front atraves de una variable en donde se guarda el localhost , más las peticiones que recibe el controlador del front y trae la información de la Base de Datos y manda esa respuesta al Front.
+  El Front se une enlazando el servidor del backend al front atraves de una variable en donde se guarda el localhost, más las peticiones que recibe el controlador del front y trae la información de la Base de Datos y manda esa respuesta al Front.
   
-  Donde por medio de la URL del front  donde se guarda el localhost del backend.
+  Donde por medio de la URL del front donde se guarda el localhost del backend.
 
   ````bash
   const BaseUrl = "http://localhost:3000/api/memes"; 
@@ -354,11 +320,6 @@ Enmanuel Feliciano - [![GitHub](https://img.shields.io/badge/GitHub-100000?style
 
 Wilder Aguilar - [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Wilder-Aguilar) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wilderaguilar/)
 
-<<<<<<< HEAD
 ## Licencia 📄
 
 Este proyecto está bajo la Licencia (Tu Licencia)
-=======
-# Licencia 📄
-Este proyecto está bajo la Licencia ((Tu Licencia))
->>>>>>> e31082bad469a21bee00c6f63d16c1f17e73c5d4
